@@ -55,10 +55,12 @@
     margin: 0;
     display: none;
   }
-  .footer-btn .text {
-    display: none !important;
-  }
   .icon {
     display: inline;
+  }
+}
+@media (max-width: 450px) {
+  .footer-btn .text {
+    display: none !important;
   }
 }
