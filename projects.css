@@ -102,16 +102,18 @@ figure {
 .caption {
   padding: 1em 0 0 0;
 }
-
 details summary {
   font-weight: bold;
   cursor: pointer;
   margin-top: 1rem;
   list-style: none;
 }
+details p {
+  max-width: 300px;
+}
 .icon-toggle {
   background-color: var(--color-secondary);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   display: inline-block;
   text-align: center;
   padding: 0.25em;
@@ -130,7 +132,6 @@ details[open] summary {
 }
 
 /* ====== MEDIA QUERIES ====== */
-
 
 @media (max-width: 390px) {
   #projects {
