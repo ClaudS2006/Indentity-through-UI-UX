@@ -51,12 +51,12 @@
   display: flex;
   padding: 0.5em;
   gap: 1em;
-  margin: 1em 0;
+  margin: 1.5em 0 1.5em 0;
   border: 1px solid var(--color-border-light);
   border-radius: 12px;
 }
 #about-me-heading h2 {
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   padding: 0.5em 0.5em;
 }
 #reveal-btn {
@@ -79,7 +79,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: clamp(1.5em, 6vw, 2.5em);
+  gap: 1em;
   margin: clamp(1em, 10vw, 2em) clamp(1em, 10vw, 5em);
 }
 .profile-pic {
@@ -95,6 +95,7 @@
 }
 .introduction {
   text-align: center;
+  line-height: 1.5;
   margin: 0 clamp(1em, 6vw, 5em);
 }
 /* styles education entries */
@@ -108,8 +109,8 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
-  align-items: start;
-  margin-bottom: 2rem;
+  align-items: center;
+  /* margin-bottom: 2rem; */
 }
 .education-entry time {
   font-weight: bold;
@@ -117,11 +118,12 @@
   padding-right: 0.5em;
 }
 
-.education-content h3 {
-  text-align: start;
+.education-content h4 {
+  align-items: start;
 }
 .education-content p {
-  margin-top: 0.5em;
+  color: var(--color-text-tertiary);
+  /* margin-top: 0.5em; */
 }
 
 /* ====== MEDIA QUERIES ====== */

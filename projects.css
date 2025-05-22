@@ -110,6 +110,7 @@ details summary {
 }
 details p {
   max-width: 300px;
+  line-height: 1.5;
 }
 .icon-toggle {
   background-color: var(--color-secondary);
