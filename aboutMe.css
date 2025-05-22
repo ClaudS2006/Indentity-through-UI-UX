@@ -49,8 +49,11 @@
 }
 #about-me-heading {
   display: flex;
+  padding: 0.5em;
   gap: 1em;
   margin: 1em 0;
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
 }
 #about-me-heading h2 {
   font-size: clamp(1rem, 3vw, 2.5rem);
@@ -62,6 +65,7 @@
   background-color: var(--color-secondary);
   border-color: transparent;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 #reveal-btn:hover {
   background-color: var(--color-secnd-btn-hover);
@@ -83,6 +87,7 @@
   height: auto;
   border-radius: 50%;
   border: 3px solid var(--color-secondary);
+  box-shadow: 2px 4px 4px 4px var(--color-secnd-btn-hover);
 }
 .container-hidden-content h3 {
   text-align: center;
