@@ -129,9 +129,12 @@ details[open] summary {
   margin-bottom: 0.5rem;
 }
 
+/* ====== MEDIA QUERIES ====== */
+
+
 @media (max-width: 390px) {
   #projects {
-    margin: 0;
+    margin: 1em 0.25em 1em 0.25em;
   }
   .container {
     background-color: var(--color-white);
@@ -142,11 +145,6 @@ details[open] summary {
 }
 @media (max-width: 1024px) {
   #projects {
-    margin: 0;
+    margin: 2em 1em 2em 1em;
   }
-
-
-@media (max-width: 1920px) {
-
-}
 }

@@ -42,7 +42,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: clamp(2em, 10vw, 6em) clamp(2em, 14vw, 14em);
+  margin: 5em 20em;
   border: 1px solid var(--color-border-medium);
   border-radius: 12px;
   box-shadow: 3px 3px 3px 3px var(--color-border-medium);
@@ -122,4 +122,18 @@
 }
 .education-content p {
   margin-top: 0.5em;
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+@media (max-width: 390px) {
+  #about-me-and-education {
+    margin: 1em 0.25em 1em 0.25em;
+  }
+}
+
+@media (max-width: 1024px) {
+  #about-me-and-education {
+    margin: 2em 1em 2em 1em;
+  }
 }
