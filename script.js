@@ -152,7 +152,6 @@ const link = document.querySelectorAll(".state");
 
 link.forEach((link) => {
   link.addEventListener("click", function (event) {
-    
     setTimeout(() => {
       link.classList.add("visited");
     }, 3000);
@@ -175,9 +174,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isShown) {
       hiddenContent.classList.remove("show");
       revealBtn.setAttribute("aria-expanded", "false");
+      revealBtn.innerHTML = '<i class="fas fa-angle-down"></i>';
     } else {
       hiddenContent.classList.add("show");
       revealBtn.setAttribute("aria-expanded", "true");
+      revealBtn.innerHTML =
+        '<i class="fas fa-angle-up" style="color: #050505"></i>';
     }
   });
 });
