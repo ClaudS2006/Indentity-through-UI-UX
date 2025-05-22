@@ -42,7 +42,7 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-  margin: clamp(2em, 10vw, 6em) clamp(2em, 14vw, 14em);
+  margin: 5em 20em;
   border: 1px solid var(--color-border-medium);
   border-radius: 12px;
   box-shadow: 3px 3px 3px 3px var(--color-border-medium);
@@ -141,4 +141,19 @@ textarea:focus:invalid {
 .message.show {
   display: block;
   opacity: 1;
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+@media (max-width: 390px) {
+  #contact {
+    margin: 1em 0.25em 1em 0.25em;
+  }
+}
+
+@media (max-width: 1024px) {
+  #contact {
+    margin: 2em 1em 2em 1em;
+  }
+  
 }
