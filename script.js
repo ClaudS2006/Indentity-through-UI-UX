@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener für Scroll-events
   window.addEventListener("scroll", function () {
-    // Buttons appear on 200px scroll
-    if (!buttonsVisible && window.scrollY > 200) {
+    // Buttons appear on 100px scroll
+    if (!buttonsVisible && window.scrollY > 100) {
       buttons.forEach((btn, index) => {
         setTimeout(() => {
           btn.classList.add("visible");

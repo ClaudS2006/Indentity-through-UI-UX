@@ -15,6 +15,12 @@
   height: auto;
   z-index: 100;
 }
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
 .footer-btn {
   padding: 8px 16px;
   background-color: var(--color-secondary);

@@ -39,10 +39,6 @@
   box-sizing: border-box;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: "Trebuchet MS", sans-serif, system-ui;
   background-color: #fff;
   overflow-x: hidden;

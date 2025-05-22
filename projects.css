@@ -44,7 +44,7 @@
   align-items: center;
   padding: 1em;
   gap: 1em;
-  margin: clamp(2em, 10vw, 6em);
+  margin: 5em 15em;
   border: 1px solid var(--color-border-medium);
   border-radius: 12px;
   box-shadow: 3px 3px 3px 3px var(--color-border-medium);
@@ -129,10 +129,21 @@ details[open] summary {
 }
 
 @media (max-width: 390px) {
+  #projects {
+    margin: 1em 0.5em;
+  }
   .container {
     background-color: var(--color-white);
   }
   .education-list {
     flex-direction: column;
   }
+}
+@media (max-width: 1024px) {
+  #projects {
+    margin: 2.5em 7.5em;
+}
+
+@media (max-width: 1920px) {
+
 }
