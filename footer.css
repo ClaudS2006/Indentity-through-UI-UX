@@ -6,7 +6,7 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  gap: 2em;
+  gap: 1.5em;
   font-size: 1rem;
   background-color: var(--color-background-primary);
   padding: 10px 0;
@@ -55,12 +55,10 @@
     margin: 0;
     display: none;
   }
-  .icon {
-    display: inline;
-  }
-}
-@media (max-width: 450px) {
   .footer-btn .text {
     display: none !important;
   }
+  .icon {
+    display: inline;
+  } 
 }
