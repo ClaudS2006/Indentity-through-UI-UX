@@ -129,9 +129,16 @@ textarea:focus:invalid {
   border: 3px solid var(--color-link-hover);
   text-decoration: underline;
 }
-.success-btn {
+#submit-btn.success-btn {
   background-color: var(--color-success);
 }
 .message {
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.message.show {
+  display: block;
+  opacity: 1;
 }

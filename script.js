@@ -1,17 +1,3 @@
-// function check for stored messages on page load
-
-window.addEventListener("load", () => {
-  resendOfflineMessages();
-});
-
-// function to buffer messages
-function saveMessageLocally(message) {
-  const savedMessages =
-    JSON.parse(localStorage.getItem("unsentMessages")) || [];
-  savedMessages.push(message);
-  localStorage.setItem("unsentMessages", JSON.stringify(savedMessages));
-}
-
 // toggle function hamburger menu
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.querySelector(".menu-toggle");
@@ -109,12 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".footer-btn");
   let buttonsVisible = false;
 
-  // Event listener für Scroll-Ereignisse
+  // Event listener für Scroll-events
   window.addEventListener("scroll", function () {
-    // Buttons erscheinen nach 200px Scroll
+    // Buttons appear on 200px scroll
     if (!buttonsVisible && window.scrollY > 200) {
-      console.log("Showing footer buttons after scroll");
-
       buttons.forEach((btn, index) => {
         setTimeout(() => {
           btn.classList.add("visible");
@@ -123,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       buttonsVisible = true;
     }
-    // NEUER CODE: Buttons wieder ausblenden, wenn unter 100px gescrollt
+    // remove Buttons below 100px scroll
     else if (buttonsVisible && window.scrollY < 100) {
       console.log("Hiding footer buttons");
 
@@ -141,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const backToTopBtn = document.getElementById("back-to-top");
   if (backToTopBtn) {
     backToTopBtn.addEventListener("click", function () {
-      // Sanftes Scrollen nach oben
+      // smooth scroll up
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -168,8 +152,7 @@ const link = document.querySelectorAll(".state");
 
 link.forEach((link) => {
   link.addEventListener("click", function (event) {
-    event.preventDefault();
-
+    
     setTimeout(() => {
       link.classList.add("visited");
     }, 3000);
@@ -203,123 +186,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// form submission via node.js and express
-
-const form = document.getElementById("form");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    message: form.message.value.trim(),
-  };
-
-  try {
-    const response = await fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-
-    if (response.ok) {
-      alert(result.message);
-      form.reset();
-    } else {
-      alert(result.error || "Error on Send.");
-    }
-  } catch (error) {
-    // network error: store message locally
-    alert("Network Error: Message stored locally.");
-
-    let savedMessages =
-      JSON.parse(localStorage.getItem("offlineMessages")) || [];
-    savedMessages.push(formData);
-    localStorage.setItem("offlineMessages", JSON.stringify(savedMessages));
-
-    form.reset();
-  }
-});
-
-// function resend offline messages
-
-async function resendOfflineMessages() {
-  let savedMessages = JSON.parse(localStorage.getItem("offlineMessages")) || [];
-  if (savedMessages.length === 0) return; // if no messages
-
-  for (let i = 0; i < savedMessages.length; i++) {
-    try {
-      const response = await fetch("http://localhost:3000/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(savedMessages[i]),
-      });
-      if (response.ok) {
-        // message successfully resend -> remove
-        savedMessages.splice(i, 1);
-        i--; // update index
-      } else {
-        // server doesn't answer: break & retry later
-        break;
-      }
-    } catch (err) {
-      // network error, break & retry later
-      break;
-    }
-  }
-
-  // updated list saved in localStorage
-  localStorage.setItem("offlineMessages", JSON.stringify(savedMessages));
-}
-
-// function, send stored messages  from localStorage
-async function sendStoredMessages() {
-  const storedMessages =
-    JSON.parse(localStorage.getItem("offlineMessages")) || [];
-
-  for (const msg of storedMessages) {
-    try {
-      const response = await fetch("http://localhost:3000/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(msg),
-      });
-
-      if (response.ok) {
-        console.log("Offline-Message sent:", msg);
-        // remove messages from array when successfully sent
-        const index = storedMessages.indexOf(msg);
-        if (index > -1) {
-          storedMessages.splice(index, 1);
-        }
-      } else {
-        console.warn("Server didn't accept message:", msg);
-      }
-    } catch (error) {
-      console.error("Error sending stored messages:", error);
-      // cancel, if server not available
-      break;
-    }
-  }
-
-  // refresh storage
-  localStorage.setItem("offlineMessages", JSON.stringify(storedMessages));
-}
-
-// page load: try to send stored messages
-window.addEventListener("load", () => {
-  sendStoredMessages();
-});
-
 // submit button change on successfully sent message
 
-const submit = document.getElementById("submit-bnt");
+const form = document.getElementById("form");
+const submit = document.getElementById("submit-btn");
+const message = document.querySelector(".message");
 
 submit.addEventListener("click", function (event) {
-  event.preventDefault();
-  submit.classList.add("message-success");
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
 
-})
+  submit.classList.add("success-btn");
+  message.classList.add("show");
+
+  // Confetti start
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 },
+  });
+  // delay send message to show animation
+  setTimeout(() => {
+    form.submit();
+  }, 2000);
+});

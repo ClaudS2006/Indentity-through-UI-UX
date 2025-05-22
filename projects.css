@@ -112,6 +112,13 @@ details summary {
   transition: transform 0.2s;
   margin-right: 0.5em;
 }
+.icon-toggle {
+  
+  background-color: var(--color-secondary);
+}
+.icon-toggle:hover {
+  background-color: var(--color-secnd-btn-hover);
+}
 details[open] .icon-toggle {
   transform: rotate(180deg); /* arrow rotates up & down*/
 }
