@@ -1,0 +1,119 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #4ab8eb; /* Calming Blue – Primary Brand Color */
+  --color-secondary: #d4a5a5; /* Dewy Mauve – Secondary Accent Color */
+
+  /* Text Colors */
+  --color-text-primary: #1d1b1b; /* Dark Gray – Primary body text, main headings */
+  --color-text-secondary: #222222; /* Medium Gray – Secondary text, subheadings */
+  --color-text-tertiary: #444444; /* Gray – Hints, captions, small labels */
+
+  /* Interactive / Link States */
+  --color-secnd-btn-hover: #ead1d1; /* Button Hover Light Mauve*/
+  --color-link-default: #1d1b1b; /* Primary Text – Link color */
+  --color-link-hover: #1a47b8; /* Hover state for links */
+  --color-link-active: #20497e; /* Active state for links */
+  --color-link-focus: #843e3e; /* Focus state for accessibility */
+  --color-link-visited: #951d7f; /* Visited link color */
+
+  /* Status Colors */
+  --color-error: #dd1709; /* Deep Red – Error messages */
+  --color-success: #0f9d58; /* Strong Green – Success messages */
+  --color-warning: #f4b400; /* Amber – Warning messages */
+  --color-info: #4285f4; /* Blue – Informational messages */
+
+  /* Background Colors */
+  --color-background-primary: #f8f8f8; /* Very Light Gray – Page background */
+  --color-background-disabled: #f2f2f2; /* Light Gray – Disabled components */
+
+  /* Border Colors */
+  --color-border-light: #e0e0e0; /* Very Light Gray – Light borders */
+  --color-border-medium: #cccccc; /* Light Gray – Medium emphasis borders */
+
+  /* Neutrals */
+  --color-black: #000000; /* Black – High contrast text on light backgrounds */
+  --color-white: #ffffff; /* White – Background or text on dark backgrounds */
+}
+
+/* ====== ABOUT ME EDUCATION ====== */
+
+#about-me-and-education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: clamp(2em, 10vw, 6em) clamp(2em, 14vw, 14em);
+  border: 1px solid var(--color-border-medium);
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px 3px var(--color-border-medium);
+}
+#about-me-heading {
+  display: flex;
+  gap: 1em;
+  margin: 1em 0;
+}
+#about-me-heading h2 {
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  padding: 0.5em 0.5em;
+}
+#reveal-btn {
+  font-size: 1rem;
+  padding: 0.5em;
+  background-color: var(--color-secondary);
+  border-color: transparent;
+  cursor: pointer;
+}
+#reveal-btn:hover {
+  background-color: var(--color-secnd-btn-hover);
+}
+.container-hidden-content {
+  display: none;
+}
+.container-hidden-content.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5em, 6vw, 2.5em);
+  margin: clamp(1em, 10vw, 2em) clamp(1em, 10vw, 5em);
+}
+.profile-pic {
+  display: flex;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid var(--color-secondary);
+}
+.container-hidden-content h3 {
+  text-align: center;
+}
+.introduction {
+  text-align: center;
+  margin: 0 clamp(1em, 6vw, 5em);
+}
+/* styles education entries */
+.education-list {
+  flex-wrap: wrap;
+}
+.education-item {
+  list-style-type: none;
+}
+.education-entry {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+.education-entry time {
+  font-weight: bold;
+  color: #888;
+  padding-right: 0.5em;
+}
+
+.education-content h3 {
+  text-align: start;
+}
+.education-content p {
+  margin-top: 0.5em;
+}

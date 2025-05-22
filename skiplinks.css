@@ -1,0 +1,25 @@
+/* Skip Links - visible on focus */
+.skip-links a {
+  position: absolute;
+  top: -70px;
+  left: 50;
+  padding: 0.5em;
+  background-color: #000;
+  color: var(--color-white);
+  z-index: 1000;
+  text-decoration: none;
+  transition: top 0.3s ease;
+}
+.skip-links a:visited {
+  color: var(--color-link-visited);
+}
+.skip-links a:focus {
+  color: var(--color-white);
+  top: 0;
+  outline: 3px solid var(--color-link-focus);
+  outline-offset: 1px;
+}
+.skip-links a:active {
+  color: var(--color-link-active);
+  transform: scale(0.98); /* slight key press animation */
+}

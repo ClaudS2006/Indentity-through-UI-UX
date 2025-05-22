@@ -1,0 +1,137 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #4ab8eb; /* Calming Blue – Primary Brand Color */
+  --color-secondary: #d4a5a5; /* Dewy Mauve – Secondary Accent Color */
+
+  /* Text Colors */
+  --color-text-primary: #1d1b1b; /* Dark Gray – Primary body text, main headings */
+  --color-text-secondary: #222222; /* Medium Gray – Secondary text, subheadings */
+  --color-text-tertiary: #444444; /* Gray – Hints, captions, small labels */
+
+  /* Interactive / Link States */
+  --color-secnd-btn-hover: #ead1d1; /* Button Hover Light Mauve*/
+  --color-link-default: #1d1b1b; /* Primary Text – Link color */
+  --color-link-hover: #1a47b8; /* Hover state for links */
+  --color-link-active: #20497e; /* Active state for links */
+  --color-link-focus: #843e3e; /* Focus state for accessibility */
+  --color-link-visited: #951d7f; /* Visited link color */
+
+  /* Status Colors */
+  --color-error: #dd1709; /* Deep Red – Error messages */
+  --color-success: #0f9d58; /* Strong Green – Success messages */
+  --color-warning: #f4b400; /* Amber – Warning messages */
+  --color-info: #4285f4; /* Blue – Informational messages */
+
+  /* Background Colors */
+  --color-background-primary: #f8f8f8; /* Very Light Gray – Page background */
+  --color-background-disabled: #f2f2f2; /* Light Gray – Disabled components */
+
+  /* Border Colors */
+  --color-border-light: #e0e0e0; /* Very Light Gray – Light borders */
+  --color-border-medium: #cccccc; /* Light Gray – Medium emphasis borders */
+
+  /* Neutrals */
+  --color-black: #000000; /* Black – High contrast text on light backgrounds */
+  --color-white: #ffffff; /* White – Background or text on dark backgrounds */
+}
+
+/* ====== CONTACT ====== */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: clamp(2em, 10vw, 6em) clamp(2em, 14vw, 14em);
+  border: 1px solid var(--color-border-medium);
+  border-radius: 12px;
+  box-shadow: 3px 3px 3px 3px var(--color-border-medium);
+}
+#contact h2 {
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  margin: 1em 0 0 0;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+label {
+  font-size: 1rem;
+  padding-bottom: 0.2em;
+}
+input {
+  margin-bottom: 1.5em;
+}
+input[name="_honey"] {
+  display: none !important;
+  position: absolute;
+  left: -9999px;
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.5;
+}
+label,
+input,
+textarea {
+  padding: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+input,
+textarea {
+  border: 3px solid var(--color-border-medium);
+}
+input.error,
+textarea.error {
+  border: 3px solid var(--color-error);
+}
+input:hover,
+textarea:hover {
+  border: 3px solid var(--color-link-hover);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+#submit-btn:focus-visible {
+  outline: 3px solid var(--color-link-focus);
+  outline-offset: 3px;
+}
+input:focus:invalid,
+textarea:focus:invalid {
+  outline: 3px solid var(--color-error);
+  outline-offset: 3px;
+}
+#submit-btn {
+  background-color: var(--color-primary);
+  border: transparent;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 1em 0;
+  transition: all 0.2s ease;
+}
+#submit-btn:hover {
+  background-color: var(--color-secnd-btn-hover);
+  border: 3px solid var(--color-link-hover);
+  text-decoration: underline;
+}
+.success-btn {
+  background-color: var(--color-success);
+}
+.message {
+  display: none;
+}
