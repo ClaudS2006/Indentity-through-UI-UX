@@ -52,7 +52,7 @@
 #project-heading {
   font-size: clamp(1rem, 3vw, 2.5rem);
   padding: 0.5em 0.5em;
-  margin: 1.5em;
+  /* margin: 1.5em; */
   border: 1px solid var(--color-border-light);
   border-radius: 12px;
 }

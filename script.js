@@ -175,13 +175,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isShown) {
       hiddenContent.classList.remove("show");
       revealBtn.setAttribute("aria-expanded", "false");
-      revealBtn.innerHTML =
-        '<i class="fas fa-angle-up" style="color: #050505"></i>';
     } else {
       hiddenContent.classList.add("show");
       revealBtn.setAttribute("aria-expanded", "true");
-      revealBtn.innerHTML =
-        '<i class="fas fa-angle-down" style="color: #050505"></i>';
     }
   });
 });
