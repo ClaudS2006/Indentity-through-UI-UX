@@ -36,12 +36,8 @@
 }
 /* ====== BASIC-STYLE ====== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  line-height: clamp(1.2, 1.8vw, 1.5) !important;
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -50,6 +46,9 @@ body {
   font-family: "Trebuchet MS", sans-serif, system-ui;
   background-color: #fff;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 img {
