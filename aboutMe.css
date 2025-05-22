@@ -37,7 +37,7 @@
 
 /* ====== ABOUT ME EDUCATION ====== */
 
-#about-me-and-education {
+#about-me-and-education { /* section container*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +47,7 @@
   border-radius: 12px;
   box-shadow: 3px 3px 3px 3px var(--color-border-medium);
 }
-#about-me-heading {
+#about-me-heading { /* container visible heading & button*/
   display: flex;
   padding: 0.5em;
   gap: 1em;
@@ -70,6 +70,7 @@
 #reveal-btn:hover {
   background-color: var(--color-secnd-btn-hover);
 }
+/* container hidden content */
 .container-hidden-content {
   display: none;
 }

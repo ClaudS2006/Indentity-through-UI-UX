@@ -72,9 +72,6 @@ img {
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 390px) {
-  * {
-    line-height: 1.5;
-  }
   .site-title {
     flex-grow: 0;
     display: none;
@@ -103,9 +100,6 @@ img {
   }
 }
 @media (min-width: 390.1px) {
-  * {
-    line-height: 1.3;
-  }
   .site-title-mobile {
     display: none;
   }
