@@ -81,6 +81,7 @@
   border-radius: 12px;
   padding-bottom: 1.5rem;
   background-color: var(--color-white);
+  box-shadow: 3px 3px 3px 3px var(--color-border-medium);
 }
 #portfolio-img,
 #generator-img,

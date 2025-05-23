@@ -27,9 +27,7 @@
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
+  display: none; 
   pointer-events: none;
 }
 .footer-btn:hover {
@@ -37,8 +35,7 @@
   transform: translateY(-2px);
 }
 .footer-btn.visible {
-  opacity: 1;
-  transform: translateY(0);
+  display: block;
   pointer-events: auto;
 }
 .icon {
