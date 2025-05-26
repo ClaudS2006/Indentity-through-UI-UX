@@ -73,9 +73,6 @@ label {
   font-size: 1rem;
   padding-bottom: 0.2em;
 }
-input {
-  margin-bottom: 1.5em;
-}
 input[name="_honey"] {
   display: none !important;
   position: absolute;
@@ -95,6 +92,7 @@ textarea {
 input,
 textarea {
   border: 3px solid var(--color-border-medium);
+  margin-bottom: 1.5em;
 }
 input.error,
 textarea.error {
@@ -123,7 +121,7 @@ textarea:focus:invalid {
   border: transparent;
   border-radius: 25px;
   padding: 1em;
-  margin: 2em 0 2em 0;
+  margin: 2em 0;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -150,12 +148,12 @@ textarea:focus:invalid {
 
 @media (max-width: 390px) {
   #contact {
-    margin: 1em 0.25em 1em 0.25em;
+    margin: 1em 0.25em;
   }
 }
 
 @media (max-width: 1024px) {
   #contact {
-    margin: 2em 1em 2em 1em;
+    margin: 2em 1em ;
   }
 }

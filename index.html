@@ -196,7 +196,7 @@
 
       <!-- ABOUT ME & EDUCATION SECTION -->
 
-      <section id="about-me-and-education">
+      <section id="about-me-and-education" aria-label="about me and education">
         <div id="about-me-heading">
           <button
             id="reveal-btn"
@@ -208,11 +208,15 @@
           </button>
           <h2>About Me &amp; Education</h2>
         </div>
-        <div id="hidden-content" class="container-hidden-content">
+        <div
+          id="hidden-content"
+          class="container-hidden-content"
+          aria-label="section content"
+        >
           <img
             class="profile-pic"
             src="ClaudiaStollProfilePicture.png"
-            alt="Profile Picture"
+            alt="Profile Picture Claudia Stoll"
           />
           <h3>
             Claudia Stoll <br />
@@ -269,7 +273,7 @@
         </div>
       </section>
       <!-- SECTION CONTACT -->
-      <section id="contact">
+      <section id="contact" aria-label="contact section">
         <h2>Let's connect</h2>
         <form
           id="form"
@@ -281,8 +285,8 @@
             name="_next"
             value="https://clauds2006.github.io/Indentity-through-UI-UX/"
           />
-          <input type="text" name="_honey" style="display: none" />
           <!-- honey trap against bots-->
+          <input type="text" name="_honey" style="display: none" />
           <label for="name">Your Name <span aria-hidden="true">*</span> </label>
           <input
             name="name"
@@ -294,7 +298,7 @@
             aria-describedby="name-help"
           />
           <small id="name-help" class="visually-hidden">
-            Please use letters only. No numbers or symbols.
+            Please use letters only. No numbers or symbols. Required field.
           </small>
           <div class="error-message" id="name-error" aria-live="polite"></div>
           <label for="email"
@@ -305,9 +309,9 @@
             autocomplete="email"
             id="email"
             type="email"
-            aria-describedby="email-help"
             placeholder="nordmann@gmail.com"
             required
+            aria-describedby="email-help"
           />
           <span id="email-help" class="visually-hidden"
             >Please enter a valid email address. Required field.
@@ -324,7 +328,7 @@
             required
           ></textarea>
           <span id="message-help" class="visually-hidden">
-            Please enter your text. 500 signs maximum.
+            Please enter your text. 500 signs maximum. Required field.
           </span>
           <button id="submit-btn" type="submit">Submit</button>
           <p class="message">Your Message has been sent successfully.</p>
