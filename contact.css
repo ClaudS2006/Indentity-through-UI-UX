@@ -117,6 +117,7 @@ textarea:focus:invalid {
   outline-offset: 3px;
 }
 #submit-btn {
+  font-size: clamp(1rem, 3vw, 1.25rem);
   background-color: var(--color-primary);
   width: 100%;
   border: transparent;
