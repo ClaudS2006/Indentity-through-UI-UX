@@ -83,6 +83,19 @@
   background-color: var(--color-white);
   box-shadow: 3px 3px 3px 3px var(--color-border-medium);
 }
+/* "invisible" heading article -> screen readers */
+.sr-only-article {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 #portfolio-img,
 #generator-img,
 #todo-img {
