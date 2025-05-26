@@ -28,6 +28,13 @@ header {
   line-height: 1.4;
   letter-spacing: 0.2rem;
 }
+.site-title-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+  font-size: clamp(1rem, 6vw, 1.5rem);
+}
 .nav {
   display: block;
   position: relative;
@@ -82,10 +89,6 @@ header {
   }
   .site-title-mobile {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1em 0;
-    font-size: clamp(1rem, 6vw, 1.5rem);
   }
 }
 
