@@ -35,7 +35,9 @@
   --color-white: #ffffff; /* White – Background or text on dark backgrounds */
 }
 /* ====== BASIC-STYLE ====== */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {

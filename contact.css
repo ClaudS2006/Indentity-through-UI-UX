@@ -118,11 +118,13 @@ textarea:focus:invalid {
 }
 #submit-btn {
   background-color: var(--color-primary);
+  width: 100%;
   border: transparent;
-  border-radius: 8px;
+  border-radius: 25px;
   padding: 1.5em;
-  margin: 1em 0;
-  transition: all 0.2s ease;
+  margin: 2em 0 2em 0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 #submit-btn:hover {
   background-color: var(--color-secnd-btn-hover);
