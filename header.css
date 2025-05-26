@@ -81,6 +81,9 @@ header {
 .state:active {
   color: var(--color-link-active);
 }
+
+/* ===== MEDIA QUERIES ===== */
+
 /* Mobile: Hide desktop title, show mobile title */
 @media (max-width: 390px) {
   .site-title {
