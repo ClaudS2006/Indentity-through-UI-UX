@@ -1,7 +1,7 @@
 :root {
   /* Brand Colors */
-  --color-primary: #4ab8eb; /* Calming Blue – Primary Brand Color */
-  --color-secondary: #d4a5a5; /* Dewy Mauve – Secondary Accent Color */
+  --color-primary: #137DAE; /* Calming Blue – Primary Brand Color */
+  --color-secondary: #B15D5D; /* Dewy Mauve – Secondary Accent Color */
 
   /* Text Colors */
   --color-text-primary: #1d1b1b; /* Dark Gray – Primary body text, main headings */
@@ -9,7 +9,7 @@
   --color-text-tertiary: #444444; /* Gray – Hints, captions, small labels */
 
   /* Interactive / Link States */
-  --color-secnd-btn-hover: #ead1d1; /* Button Hover Light Mauve*/
+  --color-secnd-btn-hover: #C37F7F; /* Button Hover Light Mauve*/
   --color-link-default: #1d1b1b; /* Primary Text – Link color */
   --color-link-hover: #1a47b8; /* Hover state for links */
   --color-link-active: #20497e; /* Active state for links */

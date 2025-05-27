@@ -1,7 +1,7 @@
 :root {
   /* Brand Colors */
-  --color-primary: #4ab8eb; /* Calming Blue – Primary Brand Color */
-  --color-secondary: #d4a5a5; /* Dewy Mauve – Secondary Accent Color */
+  --color-primary: #137DAE; /* Calming Blue – Primary Brand Color */
+  --color-secondary: #B15D5D; /* Dewy Mauve – Secondary Accent Color */
 
   /* Text Colors */
   --color-text-primary: #1d1b1b; /* Dark Gray – Primary body text, main headings */
@@ -116,6 +116,7 @@ textarea:focus:invalid {
 }
 #submit-btn {
   font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 600;
   background-color: var(--color-primary);
   width: 100%;
   border: transparent;

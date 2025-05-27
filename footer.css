@@ -30,13 +30,13 @@
   display: none; 
   pointer-events: none;
 }
-.footer-btn:hover {
-  background-color: var(--color-secnd-btn-hover);
-  transform: translateY(-2px);
-}
 .footer-btn.visible {
   display: block;
   pointer-events: auto;
+}
+.footer-btn.visible:hover {
+  background-color: var(--color-secnd-btn-hover) !important;
+  transform: translateY(-2px);
 }
 .icon {
   display: none;
