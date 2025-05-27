@@ -90,7 +90,7 @@
   border: 3px solid var(--color-secondary);
   box-shadow: 2px 4px 4px 4px var(--color-secnd-btn-hover);
 }
-.container-hidden-content h3 {
+#intro-heading {
   text-align: center;
 }
 .introduction {

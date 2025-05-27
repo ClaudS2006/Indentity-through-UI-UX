@@ -46,7 +46,7 @@
       <h1 class="site-title">Identity through UI/UX</h1>
       <!-- hamburger menu screens < 391px -->
       <nav class="nav" aria-label="main navigation">
-        <span class="sr-only" aria-live="polite">
+        <span class="sr-only-hamburger" aria-live="polite">
           navigation for screens smaller than 768px
         </span>
         <button
@@ -134,7 +134,7 @@
                     alt="shiba inu dog with hat and shirt at sunny beach in the sand"
                     loading="lazy"
                   />
-                  <i class="fa-solid fa-up-right-from-square icon-project"
+                  <i class="fa-solid fa-up-right-from-square icon-project" aria-hidden="true"
                     >Go To Project</i
                   >
                 </a>
@@ -173,7 +173,7 @@
                     alt="3d old school to do list on clipboard aside a pencil"
                     loading="lazy"
                   />
-                  <i class="fa-solid fa-up-right-from-square icon-project"
+                  <i class="fa-solid fa-up-right-from-square icon-project" aria-hidden="true"
                     >Go To Project</i
                   >
                 </a>
@@ -218,25 +218,26 @@
             class="profile-pic"
             src="ClaudiaStollProfilePicture.png"
             alt="Profile Picture Claudia Stoll"
+            tabindex="-1"
           />
-          <h3>
+          <h3 id="intro-heading" tabindex="-1">
             Claudia Stoll <br />
             20.06.1983 <br />
             Stralsund, Germany
           </h3>
-          <p class="introduction">
+          <p class="introduction" tabindex="0">
             The typical introverted extrovert - curious, open minded, with a
             love for design - from color choices, on to accessibility, to
             programming the final product.
           </p>
-          <h3>Education</h3>
+          <h3 tabindex="0">Education</h3>
           <ul class="education-list">
             <li class="education-item">
               <div class="education-entry">
-                <time datetime="2025-06">Jan - June 2025</time>
+                <time datetime="2025-06" tabindex="0">Jan - June 2025</time>
                 <div class="education-content">
-                  <h4>Frontend with AI, Oslo Nye Fagskole</h4>
-                  <p>
+                  <h4 tabindex="0">Frontend with AI, Oslo Nye Fagskole</h4>
+                  <p tabindex="0">
                     Focus on UX/UI design, accessibility, and frontend
                     essentials
                   </p>
@@ -245,28 +246,28 @@
             </li>
             <li class="education-item">
               <div class="education-entry">
-                <time datetime="2024-12">Dec 2023 - Dec 2024</time>
+                <time datetime="2024-12" tabindex="0">Dec 2023 - Dec 2024</time>
                 <div class="education-content">
-                  <h4>Frontend Developer, Codecademy</h4>
-                  <p>Focus on fundamentals of HTML, CS and JavaScript</p>
+                  <h4 tabindex="0">Frontend Developer, Codecademy</h4>
+                  <p tabindex="0">Focus on fundamentals of HTML, CS and JavaScript</p>
                 </div>
               </div>
             </li>
             <li class="education-item">
               <div class="education-entry">
-                <time datetime="2025-06">Jan - June 2024</time>
+                <time datetime="2025-06" tabindex="0">Jan - June 2024</time>
                 <div class="education-content">
-                  <h4>Internship Microsoft, Tieto Evry Norway</h4>
-                  <p>Practical training in Access Management</p>
+                  <h4 tabindex="0">Internship Microsoft, Tieto Evry Norway</h4>
+                  <p tabindex="0">Practical training in Access Management</p>
                 </div>
               </div>
             </li>
             <li class="education-item">
               <div class="education-entry">
-                <time datetime="2025-06">Nov 2022 - Nov 2023 </time>
+                <time datetime="2025-06" tabindex="0">Nov 2022 - Nov 2023 </time>
                 <div class="education-content">
-                  <h4>Java Beginners, Udemy</h4>
-                  <p>Self-education on core principles of Java</p>
+                  <h4 tabindex="0">Java Beginners, Udemy</h4>
+                  <p tabindex="0">Self-education on core principles of Java</p>
                 </div>
               </div>
             </li>

@@ -167,6 +167,7 @@ link.forEach((link) => {
 document.addEventListener("DOMContentLoaded", function () {
   const revealBtn = document.getElementById("reveal-btn");
   const hiddenContent = document.querySelector(".container-hidden-content");
+  const introHeading = document.getElementById("intro-heading");
 
   revealBtn.addEventListener("click", function () {
     const isShown = hiddenContent.classList.contains("show");
@@ -180,6 +181,9 @@ document.addEventListener("DOMContentLoaded", function () {
       revealBtn.setAttribute("aria-expanded", "true");
       revealBtn.innerHTML =
         '<i class="fas fa-angle-up" style="color: #050505"></i>';
+      setTimeout(() => {
+        introHeading.focus();
+      }, 200);
     }
   });
 });
