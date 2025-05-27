@@ -144,7 +144,7 @@ details p {
   text-align: center;
   padding: 0.25em;
   margin-right: 1em;
-  transition: background-color 0.5s ease, transform 0.5s ease;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .icon-toggle:hover {
   background-color: var(--color-secnd-btn-hover);
