@@ -125,7 +125,7 @@ figure {
 details summary,
 details p,
 details[open] summary {
-  background-color: var(--color-white); /* 3x dasselbe */
+  background-color: var(--color-white); 
 }
 details summary {
   font-weight: bold;
