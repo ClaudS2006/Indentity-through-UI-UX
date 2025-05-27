@@ -28,9 +28,11 @@
   <body>
     <!-- SKIP LINKS accessibility -->
     <nav class="skip-links" aria-label="skip link navigation">
-      <a href="#project-heading">projects</a>
-      <a href="#about-me-and-education">about me and education</a>
-      <a href="#contact">contact me</a>
+      <ul>
+        <li><a href="#project-heading">projects</a></li>
+        <li><a href="#about-me-and-education">about me and education</a></li>
+        <li><a href="#contact">contact me</a></li>
+      </ul>
     </nav>
     <!-- HEADER -->
     <header>
@@ -286,8 +288,17 @@
             value="https://clauds2006.github.io/Indentity-through-UI-UX/"
           />
           <!-- honey trap against bots-->
-          <label for="honeypot" class="visually-hidden">Leave this field empty</label>
-          <input type="text" name="_honey" id="honeypot" aria-label="Leave this field empty" tabindex="-1" autocomplete="off"/>
+          <label for="honeypot" class="visually-hidden"
+            >Leave this field empty</label
+          >
+          <input
+            type="text"
+            name="_honey"
+            id="honeypot"
+            aria-label="Leave this field empty"
+            tabindex="-1"
+            autocomplete="off"
+          />
           <label for="name">Your Name <span aria-hidden="true">*</span> </label>
           <input
             name="name"
