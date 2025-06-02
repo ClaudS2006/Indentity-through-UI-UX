@@ -117,7 +117,6 @@
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
   align-items: center;
-  /* margin-bottom: 2rem; */
 }
 .education-entry time {
   font-weight: bold;
@@ -130,7 +129,6 @@
 }
 .education-content p {
   color: var(--color-text-tertiary);
-  /* margin-top: 0.5em; */
 }
 
 /* ====== MEDIA QUERIES ====== */
