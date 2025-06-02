@@ -44,7 +44,7 @@
       />
       <!-- portfolio title -->
       <h1 class="site-title">Identity through UI/UX</h1>
-      <!-- hamburger menu screens < 391px -->
+      <!-- hamburger menu  -->
       <nav class="nav" aria-label="main navigation">
         <span class="sr-only-hamburger" aria-live="polite">
           navigation for screens smaller than 768px
@@ -58,7 +58,6 @@
         >
           ☰
         </button>
-        <!-- Link navigation screens > 391px -->
         <ul id="primary-navigation" class="nav-links">
           <li>
             <button
@@ -69,6 +68,7 @@
               <i class="fa-regular fa-rectangle-xmark"></i>
             </button>
           </li>
+           <!-- link navigation screens > 768px -->
           <li>
             <a class="state" href="#about-me-and-education"
               >About me &amp; Education</a
@@ -80,7 +80,7 @@
     </header>
     <!-- MAIN -->
     <main>
-      <!-- css in header.css -->
+      <!-- styles in header.css - only visible on small screens, replaces first h1 -->
       <h1 class="site-title-mobile">Identity through UI/UX</h1>
       <!-- PROJECTS SECTION -->
       <section id="projects" aria-labelledby="project-heading">
@@ -293,8 +293,8 @@
                 </time>
                 <div class="education-content">
                   <h4 tabindex="0">
-                    Fagbrev Salg og Service -
-                    Sales and Service (Norwegian Trade Certificate)
+                    Fagbrev Salg og Service - Sales and Service (Norwegian Trade
+                    Certificate)
                   </h4>
                   <p tabindex="0">NKI Online Studies Norway</p>
                 </div>
@@ -342,7 +342,9 @@
           </ul>
         </div>
       </section>
+
       <!-- SECTION CONTACT -->
+
       <section id="contact" aria-label="contact section">
         <h2>Let's connect</h2>
         <form
@@ -350,6 +352,7 @@
           action="https://formsubmit.co/32a5f0c47f5d064637ea3725a029f817"
           method="POST"
         >
+        <!-- go back to website after form is sent -->
           <input
             type="hidden"
             name="_next"
@@ -414,7 +417,9 @@
           <p class="message">Your Message has been sent successfully.</p>
         </form>
       </section>
+
       <!-- FOOTER -->
+       
       <footer id="page-footer">
         <span class="copyright">
           &copy;
