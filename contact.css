@@ -135,6 +135,10 @@ textarea:focus:invalid {
   border: 3px solid var(--color-link-hover);
   text-decoration: underline;
 }
+#submit-btn:focus {
+  outline: 3px solid var(--color-link-focus);
+  outline-offset: 3px;
+}
 #submit-btn.success-btn {
   background-color: var(--color-success);
 }
