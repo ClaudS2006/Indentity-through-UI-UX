@@ -149,6 +149,10 @@ details p {
 .icon-toggle:hover {
   background-color: var(--color-secnd-btn-hover);
 }
+.icon-toggle:focus {
+  outline: 3px solid var(--color-link-focus);
+  outline-offset: 3px;
+}
 details[open] .icon-toggle {
   transform: rotate(180deg); /* arrow rotates up & down*/
 }
