@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key !== "Tab") return;
 
     if (e.shiftKey) {
-      // Shift + Tab
+      // shift + tab
       if (document.activeElement === firstFocusableEl) {
         e.preventDefault();
         lastFocusableEl.focus();
       }
     } else {
-      // Tab
+      // tab
       if (document.activeElement === lastFocusableEl) {
         e.preventDefault();
         firstFocusableEl.focus();
