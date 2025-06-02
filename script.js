@@ -165,28 +165,70 @@ link.forEach((link) => {
 // function reveal hidden content about me section
 
 document.addEventListener("DOMContentLoaded", function () {
+  // secure DOM-element-references w/ null-check
   const revealBtn = document.getElementById("reveal-btn");
   const hiddenContent = document.querySelector(".container-hidden-content");
   const introHeading = document.getElementById("intro-heading");
+  
+  // return if important elements are missing
+  if (!revealBtn || !hiddenContent) {
+    console.warn("Required elements not found");
+    return;
+  }
 
+  // event listener w/ secure DOM manipulation
   revealBtn.addEventListener("click", function () {
     const isShown = hiddenContent.classList.contains("show");
-
+    
     if (isShown) {
+      // content hide
       hiddenContent.classList.remove("show");
       revealBtn.setAttribute("aria-expanded", "false");
-      revealBtn.innerHTML = '<i class="fas fa-angle-down"></i>';
+      
+      // secure icon change
+      updateButtonIcon(revealBtn, "down");
+      
     } else {
+      // content show
       hiddenContent.classList.add("show");
       revealBtn.setAttribute("aria-expanded", "true");
-      revealBtn.innerHTML =
-        '<i class="fas fa-angle-up" style="color: #050505"></i>';
-      setTimeout(() => {
-        introHeading.focus();
-      }, 200);
+      
+      // secure icon change
+      updateButtonIcon(revealBtn, "up");
+      
+      // set focus w/ null check
+      if (introHeading) {
+        setTimeout(() => {
+          introHeading.focus();
+        }, 200);
+      }
     }
   });
 });
+
+/**
+ * function update icon
+ * @param {HTMLElement} button - open/close
+ * @param {string} direction - "up" or "down"
+ */
+function updateButtonIcon(button, direction) {
+  // remove existing children
+  button.replaceChildren();
+  
+  // create new icon
+  const icon = document.createElement("i");
+  
+  if (direction === "up") {
+    icon.className = "fas fa-angle-up";
+    icon.style.color = "#050505";
+  } else {
+    icon.className = "fas fa-angle-down";
+  }
+  
+  // append icon
+  button.appendChild(icon);
+}
+
 
 // submit button change on successfully sent message
 
